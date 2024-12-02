@@ -35,7 +35,7 @@ ALLOWED_HOSTS = [
     'funaab-buy.onrender.com',
     'www.funaabbuy.com.ng',
     'funaab2.onrender.com',
-    'hiiiiiiopen.onrender.com'
+    'hiiiiiiopen.onrender.com',
 ]
 
 
@@ -166,24 +166,33 @@ MESSAGE_LEVEL = message_constants.DEBUG
 
 LOGIN_REDIRECT_URL = 'index'
 
-# CACHES = {
-#     'default': {
-#         'BACKEND': 'django_redis.cache.RedisCache',
-#         'LOCATION': 'redis://red-ct4o71l6l47c73fa8ne0:6379',
-#         'OPTIONS': {
-#             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
-#         }
-#     }
-# }
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://red-ct4o71l6l47c73fa8ne0:6379',
+        'OPTIONS': {
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+        }
+    }
+}
 
 
 
-
-
-# # Security settings for production
-# SECURE_HSTS_SECONDS = 3600  # Adjust after HTTPS confirmation
-# SECURE_SSL_REDIRECT = True
-# SECURE_BROWSER_XSS_FILTER = True
-# SECURE_CONTENT_TYPE_NOSNIFF = True
-# SESSION_COOKIE_SECURE = True
-# CSRF_COOKIE_SECURE = True
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'errors.log'),
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    },
+}
