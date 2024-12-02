@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Eapp',
-    'tracking',
+    
    
 ]
 
@@ -63,7 +63,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'Eapp.middleware.Custom404Middleware',
    
-    'tracking.middleware.VisitorTrackingMiddleware',
+   
 ]
 
 ROOT_URLCONF = 'Eproject.urls'
