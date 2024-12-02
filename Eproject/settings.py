@@ -35,6 +35,7 @@ ALLOWED_HOSTS = [
     'funaab-buy.onrender.com',
     'www.funaabbuy.com.ng',
     'funaab2.onrender.com',
+    'hiiiiiiopen.onrender.com'
 ]
 
 
