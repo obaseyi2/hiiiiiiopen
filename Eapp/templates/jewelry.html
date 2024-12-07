@@ -1,14 +1,15 @@
 {% load static %}
 <html lang="en">
-  <head><!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WHR6H0QVCM"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-WHR6H0QVCM');
-    </script>
+  <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WHR6H0QVCM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WHR6H0QVCM');
+</script>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,13 +18,13 @@
     <meta name="author" content="" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <title>Jewelry & Accessories| FUNAAB BUY</title>
-     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/apple-touch-icon.png' %}">
+    <title>ELECTRONICS | FUNAAB BUY</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/apple-touch-icon.png' %}">
 <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon-32x32.png' %}">
 <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon-16x16.png' %}">
 <link rel="manifest" href="{% static 'img/site.webmanifest' %}">
 
-    <link
+   <link
       href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700&amp;amp;subset=latin-ext"
       rel="stylesheet"
     />
@@ -255,7 +256,7 @@
                 <div class="mega-menu">
                   <div class="mega-menu__column">
                     <h4>Catalog Pages<span class="sub-toggle"></span></h4>
-                    <ul class="mega-menu__list">
+                  <ul class="mega-menu__list">
                       <li><a href="electronics">Electronics</a></li>
                       <li><a href="home">Home  </a></li>
                       <li><a href="beauty">Health &amp; Beauty</a></li>
@@ -290,14 +291,13 @@
                             </div>
                         </li>
                         <li><a href="contact">Contact Us</a><span class="sub-toggle"></span></li>
-                        <li><a  href="login">Log In </a><span class="sub-toggle"></span></li>
+                         <li><a  href="login">Log In </a><span class="sub-toggle"></span></li>
                         <li><a  href="register"> Sign up</a><span class="sub-toggle"></span></li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-
 
 
 
@@ -322,6 +322,8 @@
     </div>
   </div>
 </div>
+
+
 
 
 
@@ -361,10 +363,9 @@
 
     <!-- Loop through the products and display only those in the Electronics category -->
     {% for product in products %}
-      {% if product.product_category == 'jewelry' %}
-        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+      {% if product.product_category == 'jewelry_accessories' %}
+         <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
           <div class="ps-product">
-     
        <div class="ps-product__thumbnail">
                     <a href="JavaScript:void(0)" onclick="showImage('{{ product.product_image_url }}')">
                         {% if product.product_image_url %}
@@ -380,7 +381,6 @@
                             &#8358 {{ product.formatted_price }}
                         {% endif %}
       </div></div>
-
       <div class="ps-product__container">
         <!-- Display seller's location instead of product category -->
         <a class="ps-product__vendor" href="JavaScript:void(0)">LOCATION: {{ product.location }}</a>
@@ -392,7 +392,7 @@
             <p class="ps-product__contact">
               <a href="https://wa.me/{{ product.phone_number }}?text=Hello%2C%20I%E2%80%99m%20interested%20in%20the%20{{ product.product_name|urlencode }}%20you%20posted%20on%20Funaab%20Buy"
               target="_blank">Chat Seller</a></p><br><br><br>
-        </div>          
+        </div>
       </div>
     </div>
         </div>
@@ -412,14 +412,6 @@
     <img id="modalImage" style="max-width: 90%; max-height: 90%; object-fit: contain;" />
   </div>
 </div>
-
-
-
-
-
-
-
-
 
 
 
@@ -571,14 +563,7 @@
 
 
     </div>
-
-
-
-
-
-
-
-
+    
 
     <script>
   document.addEventListener('DOMContentLoaded', function () {
